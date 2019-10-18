@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user-pref</title>
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>USER PREFERENCES</h1>
+    </header>
+    <header>
+        <h1>Set your preferences</h1>
+    </header>
+    <form onsubmit="onSubmit(event)">
+        <label for="bcg-color">Choose backgroung color</label>
+        <input onchange="onInputChange()" class="bcg-color" type="color" id="bcg-color" name="bcg-color" />
+        <label for="txt-color">Choose text color</label>
+        <input onchange="onInputChange()" class="txt-color" type="color" id="txt-color" name="txt-color" />
+        <button class="change-color" onclick="onSetInfo()">Change colors</button>
+    </form>
+
+    <header>
+        <h2>Get your astrological forecast </h2>
+    </header>
+    <form onsubmit="onSubmit(event)">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" />
+        <label for="dob">Age:</label></td>
+        <input class="age" type="range" id="age" name="age" min="18" max="120" value="26" onchange="showAge(this.value);" /><span id="sAge">18</span>
+            <label for="dob">Date of Birth:</label>
+            <input class="date" type="date" id="dob" name="dob" />
+            <label for="time">Time of Birth:</label>
+            <input class="time" type="time" id="tob" name="tob" />
+            <button class="set-bod" onclick="onSetforecast()">Submit</button>
+    </form>
+    <article class="cast"></article>
+
+    <script src="js/utilsService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

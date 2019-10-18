@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightcyan;
+}
+
+a {
+    display: block;
+    color: black;
+    font-size: 30px;
+}
+
+input:not(.age) {
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+.map-header {
+    text-align: center;
+}
+
+.map {
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.location {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 9999999999999999;
+}
+
+.location img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

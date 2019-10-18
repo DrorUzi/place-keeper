@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>place-keeper</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>map</title>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 
-<body class="homepage" onload="init()">
+<body>
     <header>
-        <h1>WELCOME TO THE PLACE KEEPER</h1>
+        <h1 class="map-header">MAP</h1>
     </header>
+    <div class="map" id="map">
+    </div>
+    <button class="location"><img src="img/location.png"></button>
 
-    <nav>
-        <a href="user-prefs.html" target="_blank">Choose your preferences</a>
-        <a href="map.html" target="_blank">Go to map</a>
-    </nav>
 
+
+
+
+
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFB8GIj5b1g3LvHgh3ZIyI5OL_AxczOc&callback=initMap"
+        async defer></script>
+    </script>
     <script src="js/utilsService.js"></script>
     <script src="js/userPrefService.js"></script>
     <script src="js/placeService.js"></script>
