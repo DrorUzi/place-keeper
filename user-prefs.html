@@ -6,45 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user-pref</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
 
 </head>
 
 <body>
-    <header>
-        <h1>USER PREFERENCES</h1>
-    </header>
-    <header>
-        <h1>Set your preferences</h1>
-    </header>
-    <form onsubmit="onSubmit(event)">
-        <label for="bcg-color">Choose backgroung color</label>
-        <input onchange="onInputChange()" class="bcg-color" type="color" id="bcg-color" name="bcg-color" />
-        <label for="txt-color">Choose text color</label>
-        <input onchange="onInputChange()" class="txt-color" type="color" id="txt-color" name="txt-color" />
-        <button class="change-color" onclick="onSetInfo()">Change colors</button>
-    </form>
+    <nav class="flex justify-content-between navbar  navbar-expand-lg navbar-light ">
+        <header class="navbar-brand">
+            <h1>PLACE KEEPER</h1>
+        </header>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="flex-row-reverse collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html" target="_blank">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./user-prefs.html" target="_blank">Preferations</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./map.html" target="_blank">Map</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <header>
-        <h2>Get your astrological forecast </h2>
-    </header>
-    <form onsubmit="onSubmit(event)">
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" />
-        <label for="dob">Age:</label></td>
-        <input class="age" type="range" id="age" name="age" min="18" max="120" value="26" onchange="showAge(this.value);" /><span id="sAge">18</span>
-            <label for="dob">Date of Birth:</label>
-            <input class="date" type="date" id="dob" name="dob" />
-            <label for="time">Time of Birth:</label>
-            <input class="time" type="time" id="tob" name="tob" />
-            <button class="set-bod" onclick="onSetforecast()">Submit</button>
-    </form>
-    <article class="cast"></article>
+    <div class="header-border"></div>
+    <section class="form-dark mb-5">
 
+        <div class="card card-image">
+            <div class="rgba-stylish-strong py-5 px-5 z-depth-4">
+
+                <div class="text-center">
+                    <h2 class="white-text mb-5 mt-4 font-weight-bold text-uppercase"><strong>FILL YOUR
+                            INFORMATION</strong></h2>
+                </div>
+
+                <div class="md-form">
+                    <label for="form100">Your name</label>
+                    <input type="text" id="form100" class="form-control user-name" name="name" autocomplete="off"
+                        required>
+                </div>
+
+                <div class="md-form">
+                    <label for="form101">Your email</label>
+                    <input type="text" id="form101" class="form-control email" name="email">
+                </div>
+                <div class="md-form">
+                    <label for="form101">Your age</label></td>
+                    <input class="age form-control" type="range" id="form101" name="age" min="18" max="120" value="26"
+                        onchange="showAge(this.value);" /><span id="sAge">18</span>
+                </div>
+                <div class="md-form">
+                    <label for="form101">Date of Birth:</label>
+                    <input class="date form-control" type="date" id="form101" name="dob" />
+                </div>
+                <div class="md-form">
+                    <label for="form101">Time of Birth:</label>
+                    <input class="time form-control" type="time" id="form101" name="tob" />
+                </div>
+                <div class="md-form">
+                        <label for="form101">Choose backgroung color</label>
+                        <input onchange="onInputChange()" class="color bcg-color form-control" type="color" id="form101" name="bcg-color" />
+                </div>
+
+                <div class="md-form">
+                        <label for="form101">Choose text color</label>
+                        <input onchange="onInputChange()" class="color txt-color form-control" type="color" id="form101" name="txt-color" />
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="text-center col-md-12 mt-3 mb-2">                      
+                        <button type="button" class="btn btn-outline-dark btn-block btn-rounded z-depth-1 set-bod change-color"onclick="onSetInfo(),onSetforecast()">Submit</button>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+      
+    </section>
+    <!-- <header>
+        <h2>Set your info details</h2>
+    </header>
+    <form onsubmit="onSubmit(event)"> -->
+        <!-- <label for="name">Name:</label>
+        <input class="user-name" type="text" id="name" name="name" autocomplete="off" required /> -->
+        <!-- <label for="email">E-mail:</label>
+        <input class="email" type="email" name="email" /> -->
+        <!-- <label for="dob">Age:</label></td>
+        <input class="age" type="range" id="age" name="age" min="18" max="120" value="26"
+            onchange="showAge(this.value);" /><span id="sAge">18</span> -->
+        <!-- <label for="dob">Date of Birth:</label>
+        <input class="date" type="date" id="dob" name="dob" /> -->
+        <!-- <label for="time">Time of Birth:</label>
+        <input class="time" type="time" id="tob" name="tob" /> -->
+        <!-- <label for="bcg-color">Choose backgroung color</label>
+        <input onchange="onInputChange()" class="bcg-color" type="color" id="bcg-color" name="bcg-color" /> -->
+        <!-- <label for="txt-color">Choose text color</label>
+        <input onchange="onInputChange()" class="txt-color" type="color" id="txt-color" name="txt-color" /> -->
+        <!-- <button class="set-bod change-color" onclick="onSetInfo(),onSetforecast()">Submit</button> -->
+
+    <!-- </form> -->
+    <header>
+        <h2 class="cast-header"></h2>
+        <article class="cast"></article>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="js/utilsService.js"></script>
     <script src="js/userPrefService.js"></script>
     <script src="js/placeService.js"></script>
+    <script src="js/mapService.js"></script>
     <script src="js/controller.js"></script>
 </body>
 
