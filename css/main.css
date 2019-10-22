@@ -33,6 +33,13 @@ label {
     display: block;
 }
 
+.main {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+}
+
 .icon {
     cursor: pointer;
     font-size: 2em
@@ -152,7 +159,8 @@ label {
 ul {
     padding: 0.312rem;
 }
-.card{
+
+.card {
     background-color: #FCEDEA;
     font-family: openSans;
     font-size: 1.5rem;
@@ -166,21 +174,20 @@ ul {
     margin-top: 5.5em;
 }
 
-
 .form-dark .md-form label {
     color: black;
 }
 
-.form-control{
+.form-control {
     width: auto;
-
 }
-.btn{
+
+.btn {
     width: 8rem;
-    font-size:1em
+    font-size: 1em
 }
 
-.color{
+.color {
     width: 8rem;
 }
 
@@ -189,7 +196,6 @@ ul {
 }
 
 .form-dark textarea.md-textarea:focus:not([readonly]) {
-   
     color: black;
 }
 
